@@ -4,14 +4,14 @@
 int queue[SIZE];
 int front = -1, rear = -1;
 
-// Enqueue
+
 void enqueue(int value) {
     if ((rear + 1) % SIZE == front) {
         printf("Queue is Full\n");
         return;
     }
 
-    if (front == -1)  // first element
+    if (front == -1)  
         front = 0;
 
     rear = (rear + 1) % SIZE;
@@ -19,7 +19,7 @@ void enqueue(int value) {
     printf("%d inserted\n", value);
 }
 
-// Dequeue
+
 void dequeue() {
     if (front == -1) {
         printf("Queue is Empty\n");
@@ -35,7 +35,7 @@ void dequeue() {
     }
 }
 
-// Display
+
 void display() {
     if (front == -1) {
         printf("Queue is Empty\n");
@@ -53,7 +53,7 @@ void display() {
     printf("\n");
 }
 
-// Main
+
 int main() {
     int choice, value;
 
